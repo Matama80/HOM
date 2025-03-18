@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>004 SUCCESSIFUL</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JLC eDIARY</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <div id="clock"></div>
+    <div id="app-title"><strong>JLC eDIARY</strong></div>
+    <input type="text" id="search-box" placeholder="Search events..." onkeyup="searchEvents()" />
+  </header>
+
+  <main id="login-screen">
+    <h2>Login</h2>
+    <form id="login-form">
+      <input type="text" id="username" placeholder="Enter your username" required />
+      <button type="submit">Login</button>
+    </form>
+    <div id="login-error" style="color:red; display:none;">Invalid username. Try again!</div>
+  </main>
+
+  <main id="app-screen" style="display:none;">
+    <div id="calendar-container">
+      <div id="calendar-header">
+        <button id="prev-month" onclick="changeMonth(-1)">&#10094;</button>
+        <h2 id="calendar-title"></h2>
+        <button id="next-month" onclick="changeMonth(1)">&#10095;</button>
+      </div>
+      <div id="calendar-grid"></div>
+    </div>
+
+    <div id="event-form">
+      <h3>Add Event</h3>
+      <input type="text" id="event-title" placeholder="Event Title" />
+      <input type="date" id="event-date" />
+      <input type="time" id="event-time" />
+      <textarea id="event-description" placeholder="Event Description"></textarea>
+      <button onclick="saveEvent()">Save Event</button>
+    </div>
+
+    <h3>Events Table</h3>
+    <table id="event-table">
+      <thead>
+        <tr>
+          <th>Event Title</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+
+    <div id="event-popup" class="popup">
+      <div class="popup-content">
+        <h3 id="popup-title"></h3>
+        <p id="popup-date"></p>
+        <p id="popup-time"></p>
+        <p id="popup-description"></p>
+        <button onclick="closePopup()">Close</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
